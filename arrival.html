@@ -1,0 +1,133 @@
+<html>
+<head>
+    <title>Arrivals</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        nav {
+            background: #708090	;
+            height: 80px;
+            width: 100%;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+            line-height: 80px;
+            padding: 50px;
+        }
+
+        nav ul {
+            float: right;
+            margin-right: 30px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0px 5px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            font-size: 20px;
+            padding: 7px 13px;
+            border-radius: 5px;
+        }
+
+        a.active,
+        a:hover {
+            background-color: #B0C4DE;
+        }
+
+        section {
+			background: url("/semproject1/car1.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 920px;
+            width: 100%;
+        }
+		.container
+		{
+			margin-left: 5px;
+			padding: 10px;
+			text-align: center;
+			/*height: 800px;*/
+			width: 100%px;
+			display: flex;
+			/* border: 10px solid black; */
+			flex-direction: row;
+            /* justify-content: space-evenly; */
+		}
+		.pic1
+		{
+			border: 2px solid red;
+			height: 400px;
+			width: 500px;
+			margin: 10px;
+			margin-bottom: 50px;
+			padding:20px;
+		}
+		.pic2
+		{
+			border: 2px solid red;
+			height: 400px;
+			width: 500px;
+			margin: 10px;
+			margin-bottom: 10px;
+		}
+		#p1
+		{
+			background: url("/semproject1/car12.jpg");
+            background-size: cover;
+            background-position: center;     
+		}
+		#p2
+		{
+			background: url("/semproject1/car10.jpg");
+            background-size: cover;
+            background-position: center;
+		}
+    </style>
+</head>
+
+<body>
+    <nav>
+        <label class="logo">GoRent</label>
+        <ul>
+            <li><a href="home.php" class="active">HOME</a></li>
+			<li><a href="register.html">REGISTER</a></li>
+            <li><a href="book.html">BOOK</a></li>
+            <li><a href="bill.html">BILL</a></li>
+            <li><a href="admin.html">ADMIN</a></li>
+            <li><a href="arrival.html">ARRIVAL</a></li>
+        </ul>
+    </nav>
+	<section>
+		<div class="container" id="box1">
+                <div class="pic1" id="p1">1</div>
+                <div class="pic1" id="p2">2</div>
+                <div class="pic1" id="p3">3</div>
+		</div>
+		<div class="container" id="box1">
+                <div class="pic2" id="p4">1</div>
+                <div class="pic2" id="p5">2</div>
+                <div class="pic2" id="p6">3</div>
+		</div>
+         
+	</section>
+    
+</body>
+
+</html>

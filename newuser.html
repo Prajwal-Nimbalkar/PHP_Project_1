@@ -1,0 +1,96 @@
+<html>
+<head><title>New Signup</title>
+<style>
+body
+{
+	background: #1690A7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+*
+{
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+
+form
+{
+	width: 500px;
+	border: 2px solid #ccc;
+	padding: 30px;
+	background:#fff;
+	border-radius: 15px;
+}
+
+h2
+{
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+#t1,#t2,#t3
+{
+	display: block;
+	border: 2px solid #ccc;
+	width: 95%;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 5px;
+}
+
+label
+{
+	color: #888;
+	font-size: 18px;
+	padding: 10px;
+}
+
+input[type="button"],input[type="submit"]
+{
+	//margin-left:180px;
+	background: #555;
+	padding: 10px 15px;
+	color: #fff;
+	border-radius: 5px;
+	margin-radius: 10px;
+	border: none;
+}
+#btn1
+{
+	margin-left: 100px;
+	
+}
+#btn2
+{
+	margin-left: 80px;
+}
+a
+{
+	color: #fff;
+	text-decoration: none;
+}
+
+.error
+{
+	color: red;
+}
+</style>
+</head>
+	<body>
+		<form action="insert.php" method="post">
+			<h2>Signup</h2>
+			<div id="result"></div>
+			<label>User Name</label>
+			<input type="text" id="t1" name="t1" placeholder="User Name" required><br>
+			<label>Enter Password</label>
+			<input type="password" id="t2" name="t2" placeholder="Password" required><br>
+			<label>Confirm Password</label>
+			<input type="password" id="t3" name="t3" placeholder="Confirm Password" required><br>
+			<input type="submit" id="btn1" value="SUBMIT">
+			<a href="index1.php"><input type="button" id="btn2"value="BACK"></a>
+		</form>
+	</body>
+</html>

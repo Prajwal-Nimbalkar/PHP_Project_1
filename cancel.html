@@ -1,0 +1,136 @@
+<html>
+<head>
+    <title>Cancel Booking</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        nav {
+            background: #708090	;
+            height: 80px;
+            width: 100%;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+            line-height: 80px;
+            padding: 50px;
+        }
+
+        nav ul {
+            float: right;
+            margin-right: 30px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0px 5px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            font-size: 20px;
+            padding: 7px 13px;
+            border-radius: 5px;
+        }
+
+        a.active,
+        a:hover {
+            background-color: #B0C4DE;
+        }
+
+        section {
+            //background: url("/semproject1/car1.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 87vh;
+            width: 100%;
+        }
+		.container
+		{
+			background-color: #344a72;
+			font-family: "Roboto",sans-serif;
+			height: 600px;
+			padding: 15px;
+		}
+		.box1
+		{
+			width: 360px;
+			height: 200px;
+			margin: auto;
+			margin-left: 450px;
+			background-color: white;
+			border-radius: 3px;
+		}
+		h1
+		{
+			text-align: center;
+			padding-top: 15px;
+		}
+		form
+		{
+			width: 300px;
+			margin-left: 20px;
+		}
+		form label
+		{
+			display: flex;
+			margin-top: 20px;
+			font-size: 18px;
+		}
+		form input
+		{
+			width: 100%;
+			padding: 7px;
+			border: 1px solid gray;
+			border-radius: 6px;
+			outline: none;
+		}
+		input[type="submit"]
+		{
+			width: 305px;
+			height: 35px;
+			margin-top: 20px;
+			border: none;
+			background-color: #49c1a2;
+			color: white;
+			font-size: 18px;
+		}
+    </style>
+</head>
+
+<body>
+    <nav>
+        <label class="logo">GoRent</label>
+        <ul>
+            <li><a href="home.php" class="active">HOME</a></li>
+			<li><a href="register.html">REGISTER</a></li>
+            <li><a href="book.html">BOOK</a></li>
+            <li><a href="bill.html">BILL</a></li>
+            <!--<li><a href="admin.html">ADMIN</a></li>-->
+        </ul>
+    </nav>
+	<div class="container">
+		<div class="box1">
+			<form action="cancel.php" method="post">
+				<h1>CANCEL</h1>
+				<label>Booking ID</label>
+				<input type="text" placeholder="Booking ID" name="name" id="name" required>
+				<input type="submit" value="SUBMIT">
+			</form>
+		</div>
+	</div>
+</body>
+</html>

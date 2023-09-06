@@ -1,0 +1,375 @@
+<html>
+<head>
+    <title>Navbar</title>
+	<script type="text/javascript">
+		function details(f)
+	{
+		var ar;
+		if(window.XMLHttpRequest)
+		{
+			ar = new XMLHttpRequest();
+		}
+		else
+		{
+			ar = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		ar.onreadystatechange = function()
+		{
+			if(ar.readyState==4 && ar.status==200)
+			{
+				document.getElementById("result").innerHTML = ar.responseText;
+			}
+		}
+		var s = document.getElementById("loc").value;
+		
+		/*ar.open("GET","book.php?cname="+f+"&loc="+s+"&loc1="+s1+"&loc2="+s2,true);*/
+		ar.open("GET","book.php?cname="+f+"&loc="+s,true);
+		ar.send(null);
+	}
+	
+	function details1(z)
+	{
+		var ar;
+		if(window.XMLHttpRequest)
+		{
+			ar = new XMLHttpRequest();
+		}
+		else
+		{
+			ar = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		ar.onreadystatechange = function()
+		{
+			if(ar.readyState==4 && ar.status==200)
+			{
+				document.getElementById("result").innerHTML = ar.responseText;
+			}
+		}
+		
+		var s1 = document.getElementById("loc1").value;
+		
+		/*ar.open("GET","book.php?cname="+f+"&loc="+s+"&loc1="+s1+"&loc2="+s2,true);*/
+		ar.open("GET","book.php?cname="+z+"&loc1="+s1,true);
+		ar.send(null);
+	}
+	
+	function details2(x)
+	{
+		var ar;
+		if(window.XMLHttpRequest)
+		{
+			ar = new XMLHttpRequest();
+		}
+		else
+		{
+			ar = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		ar.onreadystatechange = function()
+		{
+			if(ar.readyState==4 && ar.status==200)
+			{
+				document.getElementById("result").innerHTML = ar.responseText;
+			}
+		}
+		
+		var s2 = document.getElementById("loc2").value;
+		/*ar.open("GET","book.php?cname="+f+"&loc="+s+"&loc1="+s1+"&loc2="+s2,true);*/
+		ar.open("GET","book.php?cname="+x+"&loc2="+s2,true);
+		ar.send(null);
+	}
+	
+	function disp()
+	{
+		var ar;
+		if(window.XMLHttpRequest)
+		{
+			ar = new XMLHttpRequest();
+		}
+		else
+		{
+			ar = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		ar.onreadystatechange = function()
+		{
+			if(ar.readyState==4 && ar.status==200)
+			{
+				document.getElementById("15").innerHTML = ar.responseText;
+			}
+		}	
+		
+		var km = document.getElementById("km").value;
+		
+		//var cname = document.getElementById("cname").value;
+		//var onum = document.getElementById("onum").value;
+		//var date = document.getElementById("date").value;
+		//var cnum = document.getElementById("cnum").value;
+		//var city = document.getElementById("city").value;
+		//var cnt = document.getElementById("cnt").value;
+		//ar.open("GET","carbook.php?km="+km,true);
+		//ar.open("GET","carbook.php?km="+km+"&cname="+cname+"&onum="+onum+"&date="+date+"&cnum="+cnum+"&city="+city+"&cnt="+cnt,true);
+		
+		ar.open("POST","carbook.php",true);
+		ar.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		ar.send("km="+km);
+	}
+	</script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        body {
+			//background-color: #344a72;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        nav {
+            background: #708090	;
+            height: 80px;
+            width: 100%;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+            line-height: 80px;
+            padding: 50px;
+        }
+
+        nav ul {
+            float: right;
+            margin-right: 30px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0px 5px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            font-size: 20px;
+            padding: 7px 13px;
+            border-radius: 5px;
+        }
+
+        a.active,
+        a:hover {
+            background-color: #B0C4DE;
+        }
+		
+		.details
+		{
+			display: flex;
+			height: 400px;
+			width: 420px;
+			//border: 0.1px solid red;
+			margin-left: 0px;
+			margin-top: 0px;
+			//margin-bottom: 200px;
+		}
+		#pic1
+		{
+			background: url("/semproject1/car8.jpg");
+            background-size: cover;
+			bakckground-repeat: no-repeat;
+            background-position: center;
+			height: 300px;
+			width: 420px;
+		}
+		#pic2
+		{
+			background: url("/semproject1/car4.jpg");
+            background-size: cover;
+			bakckground-repeat: no-repeat;
+            background-position: center;
+			height: 300px;
+			width: 420px;
+		}
+		#pic3
+		{
+			background: url("/semproject1/car6.jpg");
+            background-size: cover;
+			bakckground-repeat: no-repeat;
+            background-position: center;
+			height: 300px;
+			width: 420px;
+		}
+		input[type="button"]
+		{
+			border: 1px solid gray;
+			width: 420px;
+			height: 35px;
+			margin-top: 0px;
+			background-color: #49c1a2;
+			color: white;
+			font-size: 18px;
+		}
+		
+		.container
+		{			
+			align-items: center;		
+			padding: 25px 30px;
+			width: 100%;	
+		}
+		.row{
+			background-color: #fff;
+			box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+			display:flex;
+			justify-content:space-around;
+			width: 600px;
+			height: 300px;
+			margin-left: 300px;
+		}
+		
+		.container p
+		{
+			font-size: 25px;
+			font-weight: 500px;
+			position: relative;
+			margin-left: 540px;
+		}
+		
+		
+		table
+		{
+			width: 100%;
+		}
+	
+		input[type="submit"]
+		{
+			width: 600px;
+			height: 35px;
+			margin-left: 300px;
+			border: none;
+			background-color: orange;
+			color: white;
+			font-size: 18px;
+		}
+		
+		input[type="text"],input[type="date"]
+		{
+			padding: 10px;
+			width: 250px;
+		}
+		.price
+		{
+			font-weight: bold;
+			font-size: 15px;
+		}
+		.cancel
+		{
+			margin-top: 2px;
+		}
+		.select
+		{
+			width: 100%;
+			padding: 7px;
+			border: 1px solid gray;
+			outline: none;
+			background-color: orange;
+			color: white;
+			font-size: 18px;
+			text-align: center;
+		}
+    </style>
+</head>
+
+<body>
+    <nav>
+        <label class="logo">GoRent</label>
+        <ul>
+            <li><a href="home.php" class="active">HOME</a></li>
+			<li><a href="register.html">REGISTER</a></li>
+            <li><a href="book.html">BOOK</a></li>
+            <li><a href="bill.html">BILL</a></li>
+            <!--<li><a href="admin.html">ADMIN</a></li>-->
+        </ul>
+    </nav>
+	<div class="details">
+		<div class="car1">
+			<div id="pic1"></div>
+				<select name="city" class="select" id="loc">
+				<option>-Select Location-</option>
+				<option value="Baramati">Baramati</option>
+				<option value="Pune">Pune</option>
+				<option value="Daund">Daund</option>
+				<option value="Mumbai">Mumbai</option>
+				</select>
+			<div class="cardet">
+				<input type="button" value="DETAILS" onclick="details('Brezza')">
+			</div>
+		</div>
+		
+		<div class="car2">
+			<div id="pic2"></div>
+			<select name="city" class="select" id="loc1">
+				<option>-Select Location-</option>
+				<option value="Baramati">Baramati</option>
+				<option value="Pune">Pune</option>
+				<option value="Daund">Daund</option>
+				<option value="Mumbai">Mumbai</option>
+				</select>
+			<div class="cardet">
+				<input type="button" value="DETAILS" onclick="details1('Swift')">
+			</div>
+		</div>
+		
+		<div class="car3">
+			<div id="pic3"></div>
+			<select name="city" class="select" id="loc2">
+				<option>-Select Location-</option>
+				<option value="Baramati">Baramati</option>
+				<option value="Pune">Pune</option>
+				<option value="Daund">Daund</option>
+				<option value="Mumbai">Mumbai</option>
+			</select>
+			<div class="cardet">
+				<input type="button" value="DETAILS" onclick="details2('Verna')">
+			</div>
+		</div>
+	</div>
+	<div id="result"></div>
+	
+	
+	<div class="container">
+	<p>Book a Car</p>
+		<form action="carbook1.php" method="POST">
+		<div class="row">
+		<div class="dot">
+			
+		<label>Customer Name</label><br>
+		<input type="text" placeholder="Customer Name" name="cname" id="cname" required><br><br>
+		<label>Date</label><br>
+		<input type="date" placeholder="dd-mm-yyyy" name="date" id="date"required><br><br>
+		<label>City</label><br>
+		<input type="text" placeholder="City" name="city" id="city" required><br><br>
+		<label>Price/KM</label><br>
+		<div id="15" style="border:1px solid gray;height:35px;font-size: 15px;font-weight: bold;"><input type="text" name="amt" class="price" value="15"required></div><br>
+		</div>
+		
+		<div class="dot">
+				<label>Owner Registration Number</label><br>
+				<input type="text" placeholder="Owner Registration Number" name="onum" id="onum" required><br><br>
+				<label>Car Registration Number</label><br>
+				<input type="text" placeholder="Car Registration Number" name="cnum" id="cnum" required><br><br>
+				<label>Contact</label><br>
+				<input type="text" placeholder="Contact" name="cnt" id="cnt" required><br><br>
+				<label>Kilometers</label><br>
+				<input type="text" id="km" placeholder="Kilometers" name="km" onkeyup="disp()" required>
+				
+		</div>
+		</div>
+			<input type="submit" value="BOOK">
+	</form>
+<a href="cancel.html"><input type="submit" class="cancel" value="CANCEL BOOKING"></a>	
+		</div>
+</body>
+
+</html>
